@@ -1,6 +1,8 @@
-import { Box, Typography } from '@mui/material';
+import {
+  Box, Typography,
+} from '@mui/material';
 import React, { useEffect, useState } from 'react';
-import Expense from './types/product';
+import { Expense, FetchedExpense } from './types/product';
 
 const App: React.FC = () => {
   const [expenses, setExpenses] = useState<Expense[]>([]);
@@ -8,7 +10,13 @@ const App: React.FC = () => {
   useEffect(() => {
     fetch('http://localhost:5000/api/expenses')
       .then((res) => res.json())
-      .then((data) => setExpenses(data));
+      .then((fetchedExpenses: FetchedExpense[]) => {
+        const parsedExpenses = fetchedExpenses.map(({ date, ...props }) => ({
+          ...props,
+          date: new Date(date),
+        }));
+        setExpenses(parsedExpenses);
+      });
   }, []);
 
   return (
