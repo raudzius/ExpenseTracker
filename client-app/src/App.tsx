@@ -1,8 +1,7 @@
-import {
-  Box, Typography,
-} from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import ExpensesTable from './components/expenses/ExpensesTable';
+import ExpenseForm from './components/newExpense/ExpenseForm';
 import { Expense, FetchedExpense } from './types/product';
 
 const App: React.FC = () => {
@@ -25,6 +24,7 @@ const App: React.FC = () => {
       <Typography variant="h3" component="h1">
         Expense Tracker
       </Typography>
+      <ExpenseForm />
       <ExpensesTable expenses={expenses} />
     </Box>
   );
