@@ -2,7 +2,7 @@ import {
   TableContainer, Paper, Table, TableBody,
 } from '@mui/material';
 import React from 'react';
-import { Expense } from '../types/product';
+import { Expense } from '../../types/product';
 import ExpenseItem from './ExpenseItem';
 
 type ExpensesTableProps = {

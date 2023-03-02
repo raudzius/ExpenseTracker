@@ -2,7 +2,7 @@ import {
   Box, Typography,
 } from '@mui/material';
 import React, { useEffect, useState } from 'react';
-import ExpensesTable from './components/ExpensesTable';
+import ExpensesTable from './components/expenses/ExpensesTable';
 import { Expense, FetchedExpense } from './types/product';
 
 const App: React.FC = () => {

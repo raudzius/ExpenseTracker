@@ -1,6 +1,6 @@
 import { TableCell, TableRow } from '@mui/material';
 import React from 'react';
-import { Expense } from '../types/product';
+import { Expense } from '../../types/product';
 import ExpenseDate from './ExpenseDate';
 
 type ExpenseItemProps = {
