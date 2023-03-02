@@ -475,3 +475,5 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+API/expenseTracker.db-shm
+API/expenseTracker.db-wal
